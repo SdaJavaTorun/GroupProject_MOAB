@@ -1,5 +1,7 @@
 package pl.sdacademy;
 
+import pl.sdacademy.model.PersonsData;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +23,18 @@ public class CRUDMain extends HttpServlet {
         String lastName = req.getParameter("lastName");
         String age = req.getParameter("age");
 
-        out.println("<h3>Data " + name + "  " + lastName + "  " +  age +"!</h3>");
+
+       // out.println("<h3>Data " + name + "  " + lastName + "  " +  age +"!</h3>");
+      //  req.getRequestDispatcher("/CRUDMain.jsp").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("personsData", new PersonsData(
+                req.getParameter("name"),
+                req.getParameter("lastName"),
+                (Integer.parseInt(req.getParameter("age")))));
+
+    }
+
 }

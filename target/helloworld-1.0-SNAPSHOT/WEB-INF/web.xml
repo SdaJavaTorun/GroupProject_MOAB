@@ -6,27 +6,12 @@
 
     <servlet>
         <servlet-name>CRUDMain</servlet-name>
-        <servlet-class>pl.sdacademy.CRUDMain</servlet-class>
-    </servlet>
-
-    <!--<servlet>-->
-        <!--<servlet-name>CRUDMain</servlet-name>-->
-        <!--<servlet-class>pl.sdacademy.CRUDMain</servlet-class>-->
-    <!--</servlet>-->
-
-    <servlet-mapping>
-        <servlet-name>CRUDMain</servlet-name>
-        <url-pattern>/crud</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>CRUDMainTemplate</servlet-name>
         <jsp-file>/CRUDMain.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>CRUDMainTemplate</servlet-name>
-        <url-pattern>/crud.jsp</url-pattern>
+        <servlet-name>CRUDMain</servlet-name>
+        <url-pattern>/crud</url-pattern>
     </servlet-mapping>
 
 </web-app>
