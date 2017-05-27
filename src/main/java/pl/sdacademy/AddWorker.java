@@ -8,25 +8,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Andrzej on 27.05.2017.
  */
-public class CRUDMain extends HttpServlet {
+public class AddWorker extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        String name = req.getParameter("name");
-        String lastName = req.getParameter("lastName");
-        String age = req.getParameter("age");
+        req.setAttribute("personsData", new PersonsData(
+                req.getParameter("name"),
+                req.getParameter("lastName"),
+                (Integer.parseInt(req.getParameter("age")))));
 
 
-        out.println("<h3>Name:  " + name + "\nLast Name:  " + lastName + "\nAge:  " +  age + "!</h3>");
-        req.getRequestDispatcher("CRUDMain.jsp").forward(req, resp);
-}
+
+        //req.getRequestDispatcher("CRUDMain.jsp").forward(req, resp);
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -35,6 +35,7 @@ public class CRUDMain extends HttpServlet {
                 req.getParameter("lastName"),
                 (Integer.parseInt(req.getParameter("age")))));
 
+        workerList.add(personData);
         resp.sendRedirect("CRUDMain.jsp");
     }
 

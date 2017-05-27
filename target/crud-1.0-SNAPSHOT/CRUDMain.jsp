@@ -7,23 +7,8 @@
 
    <body>
 
-    <form action="crud">
-               <h2>Enter data:</h2>
-               <br/>
-               Imie:
-               <input type="text" size="20" name="name"/>
-               <br/>
-               Nazwisko:
-               <input type="text" size="20" name="lastName"/>
-               <br/>
-               Wiek:
-               <input type="text" size="5" name="age"/>
-               <br/>
-               <input type="submit"/>
-     </form>
+   <a href="ShowWorker.jsp">SHOW WORKER</a>
+   <a href="AddWorker.jsp">ADD WORKER</a>
 
-     Name: <c:out value="${personsData.name}" /><br />
-     Last Name: <c:out value="${personsData.lastName}" /><br />
-     Age: <c:out value="${personsData.age}" /><br />
-  </body>
+   </body>
 </html>
