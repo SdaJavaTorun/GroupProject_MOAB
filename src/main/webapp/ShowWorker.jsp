@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="pl.sdacademy.model.PersonsData" %>
+<%@ page import="pl.sdacademy.controller.PersonsDataConttroller" %>
+
+
 
 <html>
   <head>

@@ -9,6 +9,11 @@
     <!--<servlet-class>pl.sdacademy.CRUDMain</servlet-class>-->
     <!--</servlet>-->
 
+    <!--<welcome-file-list>-->
+        <!--<welcome-file>CRUDMain</welcome-file>-->
+    <!--</welcome-file-list>-->
+
+
     <servlet>
         <servlet-name>CRUDMain</servlet-name>
         <servlet-class>pl.sdacademy.CRUDMain</servlet-class>
@@ -30,9 +35,9 @@
 
 
     <servlet>
-    <servlet-name>AddWorker</servlet-name>
-    <servlet-class>pl.sdacademy.AddWorker</servlet-class>
-</servlet>
+        <servlet-name>AddWorker</servlet-name>
+        <servlet-class>pl.sdacademy.AddWorkerServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddWorker</servlet-name>
         <url-pattern>/addworker</url-pattern>
@@ -40,7 +45,7 @@
 
     <servlet>
         <servlet-name>AddWorkerTemplate</servlet-name>
-        <jsp-file>/addworker.jsp</jsp-file>
+        <jsp-file>/AddWorker.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddWorkerTemplate</servlet-name>
@@ -51,30 +56,21 @@
 
     <servlet>
         <servlet-name>ShowWorker</servlet-name>
-        <servlet-class>pl.sdacademy.ShowWorker</servlet-class>
+        <servlet-class>pl.sdacademy.ShowWorkersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ShowWorkerWorker</servlet-name>
+        <servlet-name>ShowWorker</servlet-name>
         <url-pattern>/showworker</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ShowWorkerWorkerTemplate</servlet-name>
-        <jsp-file>/showworker.jsp</jsp-file>
+        <servlet-name>ShowWorkerTemplate</servlet-name>
+        <jsp-file>/ShowWorker.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>ShowWorkerTemplate</servlet-name>
         <url-pattern>/showworker.jsp</url-pattern>
     </servlet-mapping>
-
-
-
-
-
-
-
-
-
 
 
 

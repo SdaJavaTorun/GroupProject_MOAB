@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="pl.sdacademy.model.PersonsData" %>
 <html>
   <head>
     <title>CRUDOkrutny</title>

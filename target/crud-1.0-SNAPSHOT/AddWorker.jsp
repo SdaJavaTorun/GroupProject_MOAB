@@ -7,7 +7,7 @@
 
    <body>
 
-    <form action="crud" method="post">
+    <form action="crud" method="get">
                <h2>Enter data:</h2>
                <br/>
                Imie:

@@ -18,24 +18,18 @@ public class CRUDMain extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        String name = req.getParameter("name");
-        String lastName = req.getParameter("lastName");
-        String age = req.getParameter("age");
+        //PrintWriter out = resp.getWriter();
 
 
-        out.println("<h3>Name:  " + name + "\nLast Name:  " + lastName + "\nAge:  " +  age + "!</h3>");
         req.getRequestDispatcher("CRUDMain.jsp").forward(req, resp);
 }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("personsData", new PersonsData(
-                req.getParameter("name"),
-                req.getParameter("lastName"),
-                (Integer.parseInt(req.getParameter("age")))));
 
         resp.sendRedirect("CRUDMain.jsp");
     }
 
 }
+
+
