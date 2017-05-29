@@ -5,19 +5,17 @@
   </head>
 
    <body>
-    <h2>LISTA NIEWOLNIKOW</h2>
+    <h2>CorpoSlayver Management</h2>
     <br/>
-    <a href="ShowWorker.jsp">SHOW WORKER</a>
+    <a href="showworkers">SHOW WORKER</a>
     <br/>
     <a href="AddWorker.jsp">ADD WORKER</a>
 
-
     <br/>
     <br/>
     <br/>
-    Kopirajt
-    <br/>
-    <h3>Szatan Zuo Pierogi Software</h3>
+    Copyright:
+    <h4>Szatan Zuo Pierogi Software</h4>
 
    </body>
 </html>

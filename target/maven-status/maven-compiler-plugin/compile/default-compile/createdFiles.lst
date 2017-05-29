@@ -1,5 +1,5 @@
 pl\sdacademy\AddWorkerServlet.class
-pl\sdacademy\controller\PersonDataController.class
-pl\sdacademy\model\PersonsData.class
+pl\sdacademy\controller\PersonDAO.class
 pl\sdacademy\CRUDMain.class
+pl\sdacademy\model\Person.class
 pl\sdacademy\ShowWorkersServlet.class

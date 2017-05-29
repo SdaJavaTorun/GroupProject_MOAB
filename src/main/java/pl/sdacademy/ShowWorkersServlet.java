@@ -1,6 +1,7 @@
 package pl.sdacademy;
 
-import pl.sdacademy.controller.PersonDataController;
+import pl.sdacademy.controller.PersonDAO;
+import pl.sdacademy.model.Person;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,12 +19,14 @@ public class ShowWorkersServlet extends HttpServlet {
     protected void doGet (HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        resp.setContentType("text/html");
+        PersonDAO personDAO = new PersonDAO();
 
-        PersonDataController personDataController = new PersonDataController();
+        personDAO.clear();
+        personDAO.addWorker(new Person("Andrzej", "Biczyk", 33));
+        personDAO.addWorker(new Person("Marta", "Ostrowska", 18));
 
-        System.out.printf("" + personDataController.showWorkerList());
-        req.setAttribute("workers", personDataController.showWorkerList());
+        System.out.printf("" + personDAO.getWorkerList());
+        req.setAttribute("workers", personDAO.getWorkerList());
         req.getRequestDispatcher("/showworkers.jsp").forward(req, resp);
     }
 
@@ -32,7 +35,6 @@ public class ShowWorkersServlet extends HttpServlet {
 
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-
         out.close();
     }
 }

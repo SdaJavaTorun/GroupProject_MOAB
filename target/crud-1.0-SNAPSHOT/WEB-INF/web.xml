@@ -40,7 +40,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AddWorker</servlet-name>
-        <url-pattern>/addworker</url-pattern>
+            <url-pattern>/addworker</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -55,21 +55,21 @@
 
 
     <servlet>
-        <servlet-name>ShowWorker</servlet-name>
+        <servlet-name>ShowWorkers</servlet-name>
         <servlet-class>pl.sdacademy.ShowWorkersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ShowWorker</servlet-name>
-        <url-pattern>/showworker</url-pattern>
+        <servlet-name>ShowWorkers</servlet-name>
+        <url-pattern>/showworkers</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ShowWorkerTemplate</servlet-name>
+        <servlet-name>ShowWorkersTemplate</servlet-name>
         <jsp-file>/ShowWorker.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ShowWorkerTemplate</servlet-name>
-        <url-pattern>/showworker.jsp</url-pattern>
+        <servlet-name>ShowWorkersTemplate</servlet-name>
+        <url-pattern>/showworkers.jsp</url-pattern>
     </servlet-mapping>
 
 

@@ -1,7 +1,7 @@
 package pl.sdacademy;
 
-import pl.sdacademy.model.PersonsData;
-import pl.sdacademy.controller.PersonDataController;
+import pl.sdacademy.model.Person;
+import pl.sdacademy.controller.PersonDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,14 +16,13 @@ public class AddWorkerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
+        PersonDAO personDAO = new PersonDAO();
 
-        PersonDataController personDataController = new PersonDataController();
+        personDAO.clear();
+        personDAO.addWorker(new Person("Andrzej", "Biczyk", 33));
+        personDAO.addWorker(new Person("Marta", "Ostrowska", 18));
 
-        personDataController.addWorker(new PersonsData("Andrzej", "Biczyk", 33));
-        personDataController.addWorker(new PersonsData("Marta", "Ostrowska", 18));
-
-        req.setAttribute("workers", PersonDataController.showWorkerList());
+        req.setAttribute("workers", PersonDAO.getWorkerList());
 
         req.getRequestDispatcher("AddWorker.jsp").forward(req, resp);
     }
@@ -31,7 +30,7 @@ public class AddWorkerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.setAttribute("personsData", new PersonsData(
+        req.setAttribute("personsData", new Person(
                                              req.getParameter("name"),
                                              req.getParameter("lastName"),
                                             (Integer.parseInt(req.getParameter("age")))));

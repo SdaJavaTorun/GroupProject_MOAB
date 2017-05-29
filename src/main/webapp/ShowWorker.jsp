@@ -1,32 +1,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="pl.sdacademy.model.PersonsData" %>
-<%@ page import="pl.sdacademy.controller.PersonsDataConttroller" %>
-
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
   <head>
     <title>ShowWorker</title>
   </head>
-
-   <body>
+    <body>
 
         <div>
+            <h2>Lista pracownikow:</h2><br/><br/>
+                <table>
 
-        <h2>Lista pracownikow:</h2><br/><br/>
-
-        <c:forEach var="i" begin="0" end="${workers.size()-1}" >
+                     <c:forEach items="${workers}" var="worker">
                             <tr>
-                                <td><c:out value="${workers.get(i).name}"/></td>
+                                <td><c:out value="${worker.name}"/></td>
                                 <td><c:out value="  "/></td>
-                                <td><c:out value="${workers.get(i).lastName}"/></td>
+                                <td><c:out value="${worker.lastName}"/></td>
                                 <td><c:out value="  "/></td>
-                                <td><c:out value="${workers.get(i).age}"/></td>
+                                <td><c:out value="${worker.age}"/></td>
                                 <br/>
                             </tr>
-
-
-
+                     </c:forEach>
+                </table>
         </div>
-   </body>
+
+    </body>
 </html>
