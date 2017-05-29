@@ -4,16 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!--<servlet>-->
+    <!--<servlet-name>CRUDMain</servlet-name>-->
+    <!--<servlet-class>pl.sdacademy.CRUDMain</servlet-class>-->
+    <!--</servlet>-->
+
     <servlet>
         <servlet-name>CRUDMain</servlet-name>
         <servlet-class>pl.sdacademy.CRUDMain</servlet-class>
     </servlet>
-
-    <!--<servlet>-->
-        <!--<servlet-name>CRUDMain</servlet-name>-->
-        <!--<servlet-class>pl.sdacademy.CRUDMain</servlet-class>-->
-    <!--</servlet>-->
-
     <servlet-mapping>
         <servlet-name>CRUDMain</servlet-name>
         <url-pattern>/crud</url-pattern>
@@ -23,10 +22,60 @@
         <servlet-name>CRUDMainTemplate</servlet-name>
         <jsp-file>/CRUDMain.jsp</jsp-file>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>CRUDMainTemplate</servlet-name>
         <url-pattern>/crud.jsp</url-pattern>
     </servlet-mapping>
+
+
+
+    <servlet>
+    <servlet-name>AddWorker</servlet-name>
+    <servlet-class>pl.sdacademy.AddWorker</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>AddWorker</servlet-name>
+        <url-pattern>/addworker</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddWorkerTemplate</servlet-name>
+        <jsp-file>/addworker.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddWorkerTemplate</servlet-name>
+        <url-pattern>/addworker.jsp</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>ShowWorker</servlet-name>
+        <servlet-class>pl.sdacademy.ShowWorker</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowWorkerWorker</servlet-name>
+        <url-pattern>/showworker</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowWorkerWorkerTemplate</servlet-name>
+        <jsp-file>/showworker.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowWorkerTemplate</servlet-name>
+        <url-pattern>/showworker.jsp</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
 
 </web-app>

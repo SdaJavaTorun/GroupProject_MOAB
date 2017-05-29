@@ -11,7 +11,7 @@ public class PersonsData {
     private String name;
     private String lastName;
     private int age;
-    List<PersonsData> workerList = new ArrayList();
+
 
 
     public PersonsData(String name, String lastName, int age) {
